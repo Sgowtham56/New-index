@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial sans-serif;
+    }
+
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg,#000000,#111111,#00ffff);
+        overflow: hidden;
+    }
+    .container{
+        text-align: center;
+        padding: 40px;
+        border-radius: 25px;
+        background: rgba(255,255,255, 0.08);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 30px cyan;
+        animation: glow 2s infinite alternate;
+    }
+    @keyframes glow{
+        from{
+            box-shadow: 0 0 20px cyan;
+        }
+        to{
+            box-shadow: 0 0 40px #00ffff,0 0 60px cyan;
+        }
+    }
+    h1{
+        font-size: 60px;
+        color: white;
+        text-shadow: 0 0 20px cyan;
+        margin-bottom: 30px;
+    }
+    p{
+        color: #ddd;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    bitton{
+        padding-right: 15px 35px;
+        border: none;
+        border-radius: 40px;
+        background: cyan;
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transform: 0.4s;
+    }
+    button:hover{
+        transform: scale(1.1);
+        background: white;
+        box-shadow: 0 0 25px white;
+    }
+    .circle{
+        position: absolute;
+        border-radius: 50px;
+        background: rgba(0,255,255, 0.2);
+        animation: float 6s infinite linear;
+    }
+    .circle:nth-child(2){
+        width: 200px;
+        height: 200px;
+        bottom: 10%;
+        left: 10%;
+    }
+    @keyframes float{
+        0%{
+            transform: translateY(0px);
+        }
+        50%{
+            transform: translateY(-30px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <div class="container">
+        <h1>Mass Website</h1>
+        <p>Welcome Back To My Stylish GitHub</p>
+        <button onclick="showMessage()">Enter</button>
+    </div>
+    <script>
+        function showMessage(){
+            alert("Welcome Partner");
+        }
+    </script>
+    
+</body>
+</html>
